@@ -74,6 +74,12 @@ app.get('/', function (req, res) {
   }
 });
 
+
+app.get('/v1/hello', function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send('Hello World!\n');
+}); 
+
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
